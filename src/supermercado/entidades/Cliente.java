@@ -22,6 +22,18 @@ import java.util.Queue;
         public String getNombre() {
             return nombre;
         }
+        public void agregarProducto(String producto) {
+            cesta.add(producto);
+        }
+
+        public String sacarProducto() {
+            return cesta.poll();
+        }
+
+        public int getCantidadProductos() {
+            return cesta.size();
+        }
+
 
 
     }
