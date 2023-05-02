@@ -14,4 +14,14 @@ import java.util.Queue;
             this.nombre = nombre;
             this.cesta = new LinkedList<>();
         }
-}
+
+        public int getId() {
+            return id;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+
+    }
