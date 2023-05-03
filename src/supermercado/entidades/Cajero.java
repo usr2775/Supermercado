@@ -11,6 +11,23 @@ public class Cajero {
         colaClientes = new LinkedList<Cliente>();
     }
 
+    public void agregarCliente(Cliente cliente) {
+        colaClientes.add(cliente);
+    }
+
+    public Cliente atenderCliente() {
+        return colaClientes.poll();
+    }
+
+    public int getTotalClientes() {
+        return colaClientes.size();
+    }
+
+    public int getNumeroCaja() {
+        return numeroCaja;
+    }
+
+
 }
 
 
