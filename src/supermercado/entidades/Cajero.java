@@ -27,6 +27,21 @@ public class Cajero {
         return numeroCaja;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        result.append("Cajero\n");
+        result.append("===================================\n");
+        result.append("• Número de caja: " + numeroCaja + ":\n");
+        result.append("• Total de clientes: " + colaClientes.size() + "\n");
+        result.append("• Clientes en la fila:\n");
+        for (Cliente cliente : colaClientes) {
+            result.append(cliente.getNombre() + "\n");
+        }
+        return result.toString();
+    }
+
+
 
 }
 
