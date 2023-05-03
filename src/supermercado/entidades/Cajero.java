@@ -6,6 +6,11 @@ public class Cajero {
     private Queue<Cliente> colaClientes;
 
 
+    public Cajero(int numeroCaja) {
+        this.numeroCaja = numeroCaja;
+        colaClientes = new LinkedList<Cliente>();
+    }
+
 }
 
 
