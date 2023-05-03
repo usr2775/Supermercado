@@ -1,18 +1,18 @@
 package supermercado.entidades;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Stack;
+
 
     public class Cliente {
         private static int idGlobal = 1;
         private final int id;
         private final String nombre;
-        private final Queue<String> cesta;
+        private final Stack<String> cesta;
 
         public Cliente(String nombre) {
             this.id = idGlobal++;
             this.nombre = nombre;
-            this.cesta = new LinkedList<>();
+            this.cesta = new Stack<>();
         }
 
         public int getId() {
@@ -23,11 +23,11 @@ import java.util.Queue;
             return nombre;
         }
         public void agregarProducto(String producto) {
-            cesta.add(producto);
+            cesta.push(producto);
         }
 
         public String sacarProducto() {
-            return cesta.poll();
+            return cesta.pop();
         }
 
         public int getCantidadProductos() {
