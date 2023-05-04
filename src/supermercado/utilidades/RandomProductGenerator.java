@@ -1,4 +1,5 @@
 package supermercado.utilidades;
+
 import java.util.Random;
 
 public class RandomProductGenerator {
