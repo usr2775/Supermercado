@@ -3,7 +3,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 public class Cajero {
     private int numeroCaja;
-    private Queue<Cliente> colaClientes;
+    static private Queue<Cliente> colaClientes;
+    public boolean cajaAbierta = false;
+    public boolean abiertaPorPrimeraVez = true;
+
 
 
     public Cajero(int numeroCaja) {
@@ -25,6 +28,29 @@ public class Cajero {
 
     public int getNumeroCaja() {
         return numeroCaja;
+    }
+
+    public void abrirCaja() {
+        if (cajaAbierta) {
+            System.out.println("La caja ya estaba abierta.");
+        } else {
+            if (abiertaPorPrimeraVez) {
+                System.out.println("La caja se ha abierto por primera vez.");
+                abiertaPorPrimeraVez = false;
+            } else {
+                System.out.println("La caja se ha abierto.");
+            }
+            cajaAbierta = true;
+        }
+    }
+
+    public void cerrarCaja() {
+        if (cajaAbierta) {
+            cajaAbierta = false;
+            System.out.println("La caja se ha cerrado correctamente. ¡Hasta la próxima!");
+        } else {
+            System.out.println("La caja ya estaba cerrada. ¡Hasta la próxima!");
+        }
     }
 
     @Override
